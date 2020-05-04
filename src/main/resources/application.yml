@@ -1,0 +1,20 @@
+spring:
+  security:
+     user:
+       name: yuanshuai
+       password: dk
+  application:
+        name: register-center
+server:
+    port: 8082
+eureka:
+    instance:
+        prefer-ip-address: true
+#        hostname: eureka1
+    client:
+        registerWithEureka: false
+        fetchRegistry: false
+        serviceUrl:
+            defaultZone: http://yuanshuai:dk@localhost:${server.port}/eureka/
+
+
